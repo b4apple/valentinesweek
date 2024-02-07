@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Show Image on Button Click</title>
+</head>
+
+<body>
+
+    <button onclick="showImage()">Show</button>
+    <br />
+    made by ars3n1c
+    <br />
+    <div id="image-container" style="display:none;">
+        <img id="display-image" src="" alt="Image">
+        <p id="message"></p>
+    </div>
+
+    <script>
+        function showImage() {
+            var currentDate = new Date();
+            var currentMonth = currentDate.getMonth() + 1; // Month starts from 0
+            var currentDay = currentDate.getDate();
+
+            if (currentMonth === 2 && currentDay >= 7 && currentDay <= 14) { // Check if it's between Feb 7th and Feb 14th
+                var image = document.getElementById('display-image');
+                var message = document.getElementById('message');
+                var imageContainer = document.getElementById('image-container');
+
+                switch (currentDay) {
+                    case 7:
+                        image.src = 'https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSlVfxwvLtC7W0n1XgFUCbmcvV7r21To3GQUA&usqp=CAU'; // Provide the path to your image
+                        message.textContent = 'Happy Rose Day!';
+                        break;
+                    case 8:
+                        image.src = 'https://i.pinimg.com/736x/01/6a/86/016a86d231905b57b86deac1012b1428.jpg'; // Provide the path to your image
+                        message.textContent = 'Happy Propose Day!';
+                        break;
+                    case 9:
+                        image.src = 'https://i.pinimg.com/564x/93/54/2c/93542c25b45c678ab66e076a137f4980.jpg'; // Provide the path to your image
+                        message.textContent = 'Happy Chocolate Day!';
+                        break;
+                    case 10:
+                        image.src = 'https://images.hindustantimes.com/img/2022/02/09/original/Teddy_Day_2_1644402631654.jpg'; // Provide the path to your image
+                        message.textContent = 'Happy Teddy Day!';
+                        break;
+                    case 11:
+                        image.src = 'https://img.freepik.com/premium-psd/happy-promise-day-cute-couple-heart-with-love_1056883-139.jpg'; // Provide the path to your image
+                        message.textContent = 'Happy Promise Day!';
+                        break;
+                    case 12:
+                        image.src = 'https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQp-fIDtIjw1-PTdDyVIk_kRTKOzwypgYDnEA&usqp=CAU'; // Provide the path to your image
+                        message.textContent = 'Happy Hug 🤗 Day!';
+                        break;
+                    case 13:
+                        image.src = 'https://static.tnn.in/photo/msid-97845596/97845596.jpg'; // Provide the path to your image
+                        message.textContent = 'Happy Kiss 😘 Day!';
+                        break;
+                    case 14:
+                        image.src = 'https://media.istockphoto.com/id/1098376998/vector/vintage-valentines-day-card-with-cute-paper-cut-hearts-vector.jpg?s=612x612&w=0&k=20&c=yC2xRMBZbIYljZvcIG4nMAI94Rs5cn4tBvh73rNdS20='; // Provide the path to your image
+                        message.textContent = 'Happy Valentine\'s Day, I loveee you smm!';
+                        break;
+                }
+
+                imageContainer.style.display = 'block';
+            } else {
+                alert('No image to show today.');
+            }
+        }
+    </script>
+
+</body>
+
+</html>
